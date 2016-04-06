@@ -1,8 +1,7 @@
-
 """
 spaceshooter.py
 Author: Daniel Wilson
-Credit: 
+Credit: Ethan Adner, Mr. D
 Assignment:
 Write and submit a program that implements the spacewar game:
 https://github.com/HHS-IntroProgramming/Spacewar
@@ -28,10 +27,12 @@ class SpaceShip(Sprite):
         self.vr = 0.0
         self.thrust = 0
         self.thrustframe = 1
+        #self. circularCollisionModule()
+        #self.imagex = 0
         SpaceGame.listenKeyEvent("keydown", "w", self.thrustOn)
         SpaceGame.listenKeyEvent("keyup", "w", self.thrustOff)
         SpaceGame.listenKeyEvent("keydown", "s", self.UPON)
-        SpaceGame.listenKeyEvent("keyup", "s", self.stop)
+        #SpaceGame.listenKeyEvent("keyup", "s", self.stop)
         SpaceGame.listenKeyEvent("keydown", "a", self.Right)
         SpaceGame.listenKeyEvent("keyup", "a", self.stop)
         SpaceGame.listenKeyEvent("keydown", "d", self.Left)
@@ -43,20 +44,20 @@ class SpaceShip(Sprite):
         self.x += self.vx
         self.y += self.vy
         self.rotation += self.vr
+        #self.explode(self.x, self.y)
         if self.thrust == 1:
             self.setImage(self.thrustframe)
             self.thrustframe += 1
-            self.vx += 0.1*math.cos(self.rotation+1/2*math.pi)
-            self.vy += 0.1*math.sin(self.rotation-1/2*math.pi)
+            self.vx += 0.03*math.cos(self.rotation+1/2*math.pi)
+            self.vy += 0.03*math.sin(self.rotation-1/2*math.pi)
             if self.thrustframe == 4:
                 self.thrustframe = 1
             else:
                 self.setImage(0)
-        """if self.vr == .1:
-            self.rotation = self.rotation - 0.00000001
-        if self.vr == -.1:
-            self.rotation = self.rotation + 0.00000001
-        """
+        col=self.collidingWithSprites(Sun)
+        if col:
+            print("boom")
+            self.explode(self)
 
     def thrustOn(self, event):
         self.thrust = 1
@@ -73,8 +74,6 @@ class SpaceShip(Sprite):
     def Left(self, event):
         self.vr = -.1
     def stop(self, event):
-        self.vy=0
-        self.vx=0
         self.vr=0
 
     def explode(self, event):
@@ -82,8 +81,8 @@ class SpaceShip(Sprite):
         self.vx=0
         self.vy=0
         ExplosionSmall(self.position)
-
-
+        
+        
 class ExplosionSmall(Sprite):
     
     asset = ImageAsset("images/explosion1.png", Frame(0,0,128,128), 10)
@@ -102,6 +101,7 @@ class ExplosionSmall(Sprite):
         if self.image == 20:
             self.destroy()
     
+    
 class SpaceGame(App):
     """
     Tutorial4 space game example.
@@ -118,21 +118,17 @@ class SpaceGame(App):
         bg5 = Sprite(bg_asset, (1024, 512))
         bg6 = Sprite(bg_asset, (1024, 0))
         SpaceShip((100,100))
-        Sun((300,300))
+        Sun((500,300))
 
         
 
     def step(self):
         for ship in self.getSpritesbyClass(SpaceShip):
             ship.step()
-            
-def step(self):
-        for ship in self.getSpritesbyClass(SpaceShip):
-            ship.step()
         for explosion in self.getSpritesbyClass(ExplosionSmall):
             explosion.step()
 
-def registerKeys(self, keys):
+    def registerKeys(self, keys):
         commands = ["left", "right", "forward", "fire"]
         self.keymap = dict(zip(keys, commands))
         [self.app.listenKeyEvent("keydown", k, self.controldown) for k in keys]
@@ -147,6 +143,9 @@ class Sun(Sprite):
     
     def __init__(self, position):
         super().__init__(Sun.asset5, position)
+        
+        
+    
 
 myapp = SpaceGame(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run()
