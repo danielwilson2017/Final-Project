@@ -76,7 +76,31 @@ class SpaceShip(Sprite):
         self.vx=0
         self.vr=0
 
+    def explode(self, event):
+        self.visible = False
+        self.vx=0
+        self.vy=0
+        ExplosionSmall(self.position)
 
+
+class ExplosionSmall(Sprite):
+    
+    asset = ImageAsset("images/explosion1.png", Frame(0,0,128,128), 10)
+    boomasset = SoundAsset("sounds/explosion1.mp3")
+    
+    def __init__(self, position):
+        super().__init__(ExplosionSmall.asset, position)
+        self.image = 0
+        self.center = (0.5, 0.5)
+        self.boom = Sound(ExplosionSmall.boomasset)
+        self.boom.play()
+        
+    def step(self):
+        self.setImage(self.image//2)  # slow it down
+        self.image = self.image + 1
+        if self.image == 20:
+            self.destroy()
+    
 class SpaceGame(App):
     """
     Tutorial4 space game example.
@@ -100,7 +124,12 @@ class SpaceGame(App):
     def step(self):
         for ship in self.getSpritesbyClass(SpaceShip):
             ship.step()
-
+            
+def step(self):
+        for ship in self.getSpritesbyClass(SpaceShip):
+            ship.step()
+        for explosion in self.getSpritesbyClass(ExplosionSmall):
+            explosion.step()
 
 def registerKeys(self, keys):
         commands = ["left", "right", "forward", "fire"]
