@@ -75,6 +75,8 @@ class SpaceShip(Sprite):
         self.vr = -.1
     def stop(self, event):
         self.vr=0
+        self.vx=0
+        self.vy
 
     def explode(self, event):
         self.visible = False
