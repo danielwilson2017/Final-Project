@@ -48,8 +48,8 @@ class SpaceShip(Sprite):
         if self.thrust == 1:
             self.setImage(self.thrustframe)
             self.thrustframe += 1
-            self.vx += 0.03*math.cos(self.rotation+1/2*math.pi)
-            self.vy += 0.03*math.sin(self.rotation-1/2*math.pi)
+            self.vx += 0.1*math.cos(self.rotation+1/2*math.pi)
+            self.vy += 0.1*math.sin(self.rotation-1/2*math.pi)
             if self.thrustframe == 4:
                 self.thrustframe = 1
             else:
@@ -76,7 +76,7 @@ class SpaceShip(Sprite):
     def stop(self, event):
         self.vr=0
         self.vx=0
-        self.vy
+        self.vy=0
 
     def explode(self, event):
         self.visible = False
