@@ -13,8 +13,8 @@ SCREEN_WIDTH = 1250
 SCREEN_HEIGHT = 700
 
 
-lvl = str(input("What is your level? "))
-print(lvl)
+lvl = int(input("What is your level? "))
+
 
 class SpaceShip(Sprite):
     """
@@ -58,9 +58,10 @@ class SpaceShip(Sprite):
             else:
                 self.setImage(0)
         col=self.collidingWithSprites(Asteroid)
-        if col:
+        if col < 4:
             print("boom")
             self.explode(self)
+            col=col+1
 
     def thrustOn(self, event):
         self.thrust = 1
@@ -124,7 +125,15 @@ class SpaceGame(App):
         bg5 = Sprite(bg_asset, (1024, 512))
         bg6 = Sprite(bg_asset, (1024, 0))
         SpaceShip((600,400))
-        Asteroid((500,200))
+        
+        
+        numas=lvl
+        if numas == 1 :
+            Asteroid((500,200))
+        elif numas >= 1:
+            Asteroid((500,400))
+        
+
 
         
 
@@ -147,8 +156,11 @@ class Asteroid(Sprite):
     height = 50
     width = 50
     
+    
+    
     def __init__(self, position):
         super().__init__(Asteroid.asset5, position)
+    
         
         
     
