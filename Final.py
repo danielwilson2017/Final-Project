@@ -98,7 +98,9 @@ class ExplosionSmall(Sprite):
         self.image = 0
         self.center = (0.5, 0.5)
         self.boom = Sound(ExplosionSmall.boomasset)
-        self.boom.play()
+        if x <= 2:
+            self.boom.play()
+            x=x+1
         
     def step(self):
         self.setImage(self.image//2)  # slow it down
@@ -147,7 +149,7 @@ class Asteroid(Sprite):
     width = 50
     
     def __init__(self, position):
-        super().__init__(Sun.asset5, position)
+        super().__init__(Asteroid.asset5, position)
         
         
     
