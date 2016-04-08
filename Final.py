@@ -98,9 +98,8 @@ class ExplosionSmall(Sprite):
         self.image = 0
         self.center = (0.5, 0.5)
         self.boom = Sound(ExplosionSmall.boomasset)
-        if x <= 2:
-            self.boom.play()
-            x=x+1
+        self.boom.play()
+        
         
     def step(self):
         self.setImage(self.image//2)  # slow it down
@@ -124,8 +123,8 @@ class SpaceGame(App):
         bg4 = Sprite(bg_asset, (512, 512)) 
         bg5 = Sprite(bg_asset, (1024, 512))
         bg6 = Sprite(bg_asset, (1024, 0))
-        SpaceShip((100,100))
-        Asteroid((500,300))
+        SpaceShip((600,400))
+        Asteroid((500,200))
 
         
 
