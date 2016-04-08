@@ -140,8 +140,8 @@ class SpaceGame(App):
 class Sun(Sprite):
     
     asset5 = ImageAsset("images/Asteroid.png")
-    height = 90
-    width = 40
+    height = 50
+    width = 50
     
     def __init__(self, position):
         super().__init__(Sun.asset5, position)
