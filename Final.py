@@ -13,6 +13,9 @@ SCREEN_WIDTH = 1250
 SCREEN_HEIGHT = 700
 
 
+lvl = str(input("What is your level? "))
+print(lvl)
+
 class SpaceShip(Sprite):
     """
     Animated space ship
