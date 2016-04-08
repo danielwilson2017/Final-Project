@@ -139,7 +139,7 @@ class SpaceGame(App):
 
 class Sun(Sprite):
     
-    asset5 = ImageAsset("images/sun.png")
+    asset5 = ImageAsset("images/Asteroid.png")
     height = 90
     width = 40
     
