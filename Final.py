@@ -57,7 +57,7 @@ class SpaceShip(Sprite):
                 self.thrustframe = 1
             else:
                 self.setImage(0)
-        col=self.collidingWithSprites(Sun)
+        col=self.collidingWithSprites(Asteroid)
         if col:
             print("boom")
             self.explode(self)
@@ -123,7 +123,7 @@ class SpaceGame(App):
         bg5 = Sprite(bg_asset, (1024, 512))
         bg6 = Sprite(bg_asset, (1024, 0))
         SpaceShip((100,100))
-        Sun((500,300))
+        Asteroid((500,300))
 
         
 
@@ -140,7 +140,7 @@ class SpaceGame(App):
         [self.app.listenKeyEvent("keyup", k, self.controlup) for k in keys]
 
 
-class Sun(Sprite):
+class Asteroid(Sprite):
     
     asset5 = ImageAsset("images/Asteroid.png")
     height = 50
