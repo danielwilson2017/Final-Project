@@ -142,6 +142,8 @@ class SpaceGame(App):
             ship.step()
         for explosion in self.getSpritesbyClass(ExplosionSmall):
             explosion.step()
+        for asteroid in self.getSpritesbyClass(Asteroid):
+            asteroid.step()
 
     def registerKeys(self, keys):
         commands = ["left", "right", "forward", "fire"]
