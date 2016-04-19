@@ -157,8 +157,8 @@ class Asteroid(Sprite):
     asset5 = ImageAsset("images/Asteroid.png")
     def __init__(self, position):
         super().__init__(Asteroid.asset5, position)
-        self.vx = 1
-        self.vy = 1
+        self.vx = .5
+        self.vy = 0.5
         self.vr = 0.01
         self.thrust = 1
         self.thrustframe = 1
