@@ -1,3 +1,28 @@
+"""
+Final.py
+Author: Daniel Wilson
+Credit: Ethan Adner, Mr. D
+Assignment:
+Write and submit a program that implements the spacewar game:
+https://github.com/HHS-IntroProgramming/Spacewar
+"""
+from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
+from ggame import SoundAsset, Sound, TextAsset, Color
+import math
+SCREEN_WIDTH = 1250
+SCREEN_HEIGHT = 700
+
+
+lvl = int(input("What is your level? "))
+
+
+class SpaceShip(Sprite):
+    """
+    Animated space ship
+    """
+    asset = ImageAsset("images/four_spaceship_by_albertov_with_thrust.png", 
+        Frame(227,0,292-227,125), 4, 'vertical')
+
     def __init__(self, position):
         super().__init__(SpaceShip.asset, position)
         self.vx = 0
@@ -33,11 +58,10 @@
             else:
                 self.setImage(0)
         col=self.collidingWithSprites(Asteroid)
-   
-        if col:
+        if col < 4:
             print("boom")
             self.explode(self)
-    
+            col=col+1
 
     def thrustOn(self, event):
         self.thrust = 1
@@ -57,3 +81,89 @@
         self.vr=0
         self.vx=0
         self.vy=0
+
+    def explode(self, event):
+        self.visible = False
+        self.vx=0
+        self.vy=0
+        ExplosionSmall(self.position)
+        
+        
+class ExplosionSmall(Sprite):
+    
+    asset = ImageAsset("images/explosion1.png", Frame(0,0,128,128), 10)
+    boomasset = SoundAsset("sounds/explosion1.mp3")
+    
+    def __init__(self, position):
+        super().__init__(ExplosionSmall.asset, position)
+        self.image = 0
+        self.center = (0.5, 0.5)
+        self.boom = Sound(ExplosionSmall.boomasset)
+        self.boom.play()
+        
+        
+    def step(self):
+        self.setImage(self.image//2)  # slow it down
+        self.image = self.image + 1
+        if self.image == 20:
+            self.destroy()
+    
+    
+class SpaceGame(App):
+    """
+    Tutorial4 space game example.
+    """
+    def __init__(self, width, height):
+        super().__init__(width, height)
+        black = Color(0, 1)
+        noline = LineStyle(0, black)
+        bg_asset = ImageAsset("images/starfield.jpg")
+        bg1 = Sprite(bg_asset, (0,0))
+        bg2 = Sprite(bg_asset, (512,0))
+        bg3 = Sprite(bg_asset, (0, 512))
+        bg4 = Sprite(bg_asset, (512, 512)) 
+        bg5 = Sprite(bg_asset, (1024, 512))
+        bg6 = Sprite(bg_asset, (1024, 0))
+        SpaceShip((600,400))
+        
+        
+        numas=lvl
+        if numas == 1 :
+            Asteroid((500,200))
+        elif numas >= 1:
+            Asteroid((500,400))
+        
+
+
+        
+
+    def step(self):
+        for ship in self.getSpritesbyClass(SpaceShip):
+            ship.step()
+        for explosion in self.getSpritesbyClass(ExplosionSmall):
+            explosion.step()
+
+    def registerKeys(self, keys):
+        commands = ["left", "right", "forward", "fire"]
+        self.keymap = dict(zip(keys, commands))
+        [self.app.listenKeyEvent("keydown", k, self.controldown) for k in keys]
+        [self.app.listenKeyEvent("keyup", k, self.controlup) for k in keys]
+
+
+class Asteroid(Sprite):
+    
+    asset5 = ImageAsset("images/Asteroid.png")
+    height = 50
+    width = 50
+    
+    
+    
+    def __init__(self, position):
+        super().__init__(Asteroid.asset5, position)
+    
+        
+        
+    
+
+myapp = SpaceGame(SCREEN_WIDTH, SCREEN_HEIGHT)
+myapp.run()
