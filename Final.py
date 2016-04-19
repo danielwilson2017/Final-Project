@@ -58,10 +58,10 @@ class SpaceShip(Sprite):
             else:
                 self.setImage(0)
         col=self.collidingWithSprites(Asteroid)
-        if col < 4:
+        if col:
             print("boom")
             self.explode(self)
-            col=col+1
+            
 
     def thrustOn(self, event):
         self.thrust = 1
@@ -132,7 +132,7 @@ class SpaceGame(App):
             Asteroid((500,200))
         elif numas >= 1:
             Asteroid((500,400))
-        
+            Asteroid((500,200))
 
 
         
@@ -153,17 +153,30 @@ class SpaceGame(App):
 class Asteroid(Sprite):
     
     asset5 = ImageAsset("images/Asteroid.png")
-    height = 50
-    width = 50
-    
-    
-    
     def __init__(self, position):
         super().__init__(Asteroid.asset5, position)
-    
-        
-        
-    
+        self.vx = 1
+        self.vy = 1
+        self.vr = 0.01
+        self.thrust = 1
+        self.thrustframe = 1
+        #self.fxcenter = self.fycenter = 0.5
+
+    def step(self):
+        self.x += self.vx
+        self.y += self.vy
+        self.rotation += self.vr
+        if self.thrust == 1:
+            #self.setImage(self.thrustframe)
+            self.thrustframe += 1
+            if self.thrustframe == 4:
+                self.thrustframe = 1
+        else:
+            self.setImage(0)
+   
+
+
+
 
 myapp = SpaceGame(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run()
