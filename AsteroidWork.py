@@ -79,9 +79,11 @@ class SpaceGame(App):
         numas=lvl
         if numas == 1 :
             Asteroid((b,c))
-        elif numas >= 1:
+        elif numas == 2:
             Asteroid((500,400))
             Asteroid((500,200))
+        elif numas == 3:
+            Asteroid((100,100))
 
     def step(self):
         for ship in self.getSpritesbyClass(Asteroid):
