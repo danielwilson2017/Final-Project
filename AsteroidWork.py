@@ -4,11 +4,12 @@ tutorial4.py
 by E. Dennison
 """
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
+import random
 
-SCREEN_WIDTH = 640
-SCREEN_HEIGHT = 480
+SCREEN_WIDTH = 1250
+SCREEN_HEIGHT = 700
 
-
+lvl = int(input("What is your level? "))
 class Asteroid(Sprite):
     
     asset5 = ImageAsset("images/Asteroid.png")
@@ -20,7 +21,10 @@ class Asteroid(Sprite):
         self.thrust = 1
         self.thrustframe = 1
         #self.fxcenter = self.fycenter = 0.5
-
+        b=random.randrange(0,1250,10)
+        c=random.randrange(0,700,10)
+        
+        
     def step(self):
         self.x += self.vx
         self.y += self.vy
@@ -64,7 +68,7 @@ class SpaceGame(App):
         
         numas=lvl
         if numas == 1 :
-            Asteroid((500,200))
+            Asteroid((b,c))
         elif numas >= 1:
             Asteroid((500,400))
             Asteroid((500,200))
