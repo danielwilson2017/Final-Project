@@ -10,6 +10,8 @@ SCREEN_WIDTH = 1250
 SCREEN_HEIGHT = 700
 
 lvl = int(input("What is your level? "))
+b==random.randrange(0,1250,10)
+c==random.randrange(0,700,10)
 class Asteroid(Sprite):
     
     asset5 = ImageAsset("images/Asteroid.png")
@@ -21,8 +23,7 @@ class Asteroid(Sprite):
         self.thrust = 1
         self.thrustframe = 1
         #self.fxcenter = self.fycenter = 0.5
-        b==random.randrange(0,1250,10)
-        c==random.randrange(0,700,10)
+        
         
         
     def step(self):
