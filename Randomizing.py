@@ -14,7 +14,7 @@ lvl = int(input("What is your level? "))
 #randomizing the spawn point of the asteroid 
 nums=lvl
 
-while nums >=0:
+while nums >=1:
     h=1
     while h==1:
         b=random.randint(1,1000)
@@ -23,8 +23,8 @@ while nums >=0:
         e=random.randint(1,700)
         if b<=1250 and d<=1250 and e<=5 and c<=5:
             h=0
-            f=(b,c)
-            g=(d,e)
+            f=(b,d)
+            g=(c,e)
             h=list(zip(f,g))
             m=random.randint(1,5)
             print(h)
