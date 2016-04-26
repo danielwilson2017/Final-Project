@@ -23,16 +23,18 @@ while h==1:
     e=random.randint(1,700)
     if b<=1250 and d<=1250 and e<=5 and c<=5:
         h=0
-        f=list(zip(b,c))
-        g=list(zip(d,e))
+        f=(b,c)
+        g=(d,e)
+        h=list(zip(f,g))
         m=random.randint(1,5)
-        while m<=3:
-            j=(
+        print(h)
+        #while m<=3:
+            #j=(
+    else:
+        h=1
 '''
     elif b<=5 and c<=700:
         h=0
         print(b,c)
 '''
-    else:
-        h=1
-        #print(b,c)
+  
