@@ -26,16 +26,26 @@ while nums >=1:
             f=(b,d)
             g=(c,e)
             h=list(zip(f,g))
-            m=random.randint(1,5)
             print(h)
-            #while m<=3:
-                #j=(
+            m=random.randint(1,5)
+            if m<=3:
+                j=h[0:1]
+                k=h[1:2]
+            else:
+                k=h[0:1]
+                j=h[1:2]
+            print(j)
+            print(k)
+        else:
+            h=1
+    nums=nums-1
+            
+'''
+        elif b<=5 and c<=700:
+            h=0
+            print(b,c)
+
         else:
             h=1
     nums=nums-1
 '''
-    elif b<=5 and c<=700:
-        h=0
-        print(b,c)
-'''
-  
