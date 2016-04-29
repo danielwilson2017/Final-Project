@@ -54,7 +54,7 @@ while nums >=1:
     nums=nums-1
 
 print(saved)
-saved2=[]
+
 
 while numbs >=8:
     h=1
@@ -68,7 +68,7 @@ while numbs >=8:
             f=(b,d)
             g=(c,e)
             h=list(zip(f,g))
-            saved2.append((h))
+            saved.append((h))
             
 
         elif b<=5 and d<=5 and e<=700 and c<=700:
@@ -76,16 +76,15 @@ while numbs >=8:
             f=(b,d)
             g=(c,e)
             h=list(zip(f,g))
-            saved2.append((h))
+            saved.append((h))
             
 
         else:
             h=1
     numbs=numbs-1
 
-print(saved2)
+print(saved)
 
-saved3=[]
 
 while numbes >=12:
     h=1
@@ -114,4 +113,4 @@ while numbes >=12:
             h=1
     numbes=numbes-1
 
-print(saved3)
+print(saved)
