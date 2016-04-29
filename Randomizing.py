@@ -13,7 +13,7 @@ SCREEN_HEIGHT = 700
 lvl = int(input("What is your level? "))
 #randomizing the spawn point of the asteroid 
 nums=lvl
-if nums>=5:
+if nums>=6:
     numbs=nums+1
     nums=5
 else:
@@ -51,7 +51,7 @@ while nums >=1:
 print(saved)
 saved2=[]
 
-while numbs >=5:
+while numbs >=7:
     h=1
     while h==1:
         b=random.randint(1,1000)
