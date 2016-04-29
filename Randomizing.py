@@ -4,7 +4,7 @@
 tutorial4.py
 by E. Dennison
 """
-from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
+
 import random
 
 SCREEN_WIDTH = 1250
@@ -18,6 +18,7 @@ if nums>=6 and nums<=12:
     nums=5
 elif nums>=13:
     numbes=nums+1
+    numbs=12
     nums=5
 else:
     numbs=0
