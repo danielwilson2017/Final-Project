@@ -16,6 +16,8 @@ nums=lvl
 if nums>=5:
     numbs=nums+1
     nums=5
+else:
+    numbs=0
 
 saved=[]
 
