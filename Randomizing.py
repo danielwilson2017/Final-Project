@@ -13,7 +13,7 @@ SCREEN_HEIGHT = 700
 lvl = int(input("What is your level? "))
 #randomizing the spawn point of the asteroid 
 nums=lvl
-if nums>=6 and nums<=13:
+if nums>=6 and nums<=12:
     numbs=nums+1
     nums=5
 elif nums
