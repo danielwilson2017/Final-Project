@@ -74,6 +74,6 @@ while numbs >=5:
 
         else:
             h=1
-    nums=nums-1
+    numbs=numbs-1
 
 print(saved2)
