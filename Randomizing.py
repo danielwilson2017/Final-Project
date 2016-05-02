@@ -15,6 +15,7 @@ lvl = int(input("What is your level? "))
 nums=lvl
 if nums>=6 and nums<=10:
     numbs=nums+1
+    numbes=0
     nums=5
 elif nums>=11:
     numbes=nums+1
