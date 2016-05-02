@@ -99,7 +99,7 @@ while numbes >=12:
             f=(b,d)
             g=(c,e)
             h=list(zip(f,g))
-            saved3.append((h))
+            saved.append((h))
             
 
         elif b<=5 and d<=5 and e<=700 and c<=700:
@@ -107,7 +107,7 @@ while numbes >=12:
             f=(b,d)
             g=(c,e)
             h=list(zip(f,g))
-            saved3.append((h))
+            saved.append((h))
             
 
         else:
