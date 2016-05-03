@@ -36,18 +36,17 @@ while nums >=1:
         e=random.randint(1,700)
         if b<=1250 and d<=1250 and e<=5 and c<=5:
             h=0
-            f=(b,d)
-            g=(c,e)
-            h=list(zip(f,g))
-            saved.append((h))
+            j=(b,c)
+            k=(d,e)
+            saved.append((j))
+            saved.append((k))
             
 
         elif b<=5 and d<=5 and e<=700 and c<=700:
-            h=0
-            f=(b,d)
-            g=(c,e)
-            h=list(zip(f,g))
-            saved.append((h))
+            j=(b,c)
+            k=(d,e)
+            saved.append((j))
+            saved.append((k))
             
 
         else:
@@ -66,18 +65,18 @@ while numbs >=8:
         e=random.randint(1,700)
         if b<=1250 and d<=1250 and e<=5 and c<=5:
             h=0
-            f=(b,d)
-            g=(c,e)
-            h=list(zip(f,g))
-            saved.append((h))
+            j=(b,c)
+            k=(d,e)
+            saved.append((j))
+            saved.append((k))
             
 
         elif b<=5 and d<=5 and e<=700 and c<=700:
             h=0
-            f=(b,d)
-            g=(c,e)
-            h=list(zip(f,g))
-            saved.append((h))
+            j=(b,c)
+            k=(d,e)
+            saved.append((j))
+            saved.append((k))
             
 
         else:
@@ -96,18 +95,18 @@ while numbes >=12:
         e=random.randint(1,700)
         if b<=1250 and d<=1250 and e<=5 and c<=5:
             h=0
-            f=(b,d)
-            g=(c,e)
-            h=list(zip(f,g))
-            saved.append((h))
+            j=(b,c)
+            k=(d,e)
+            saved.append((j))
+            saved.append((k))
             
 
         elif b<=5 and d<=5 and e<=700 and c<=700:
             h=0
-            f=(b,d)
-            g=(c,e)
-            h=list(zip(f,g))
-            saved.append((h))
+            j=(b,c)
+            k=(d,e)
+            saved.append((j))
+            saved.append((k))
             
 
         else:
