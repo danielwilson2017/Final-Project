@@ -25,6 +25,7 @@ else:
     numbs=0
     numbes=0
 
+saved=[]
 
 while nums >=1:
     h=1
@@ -111,4 +112,5 @@ while numbes >=12:
 
 print(saved)
 
-print(saved[0:2])
+print(saved[0:1])
+print(saved[3:4])
