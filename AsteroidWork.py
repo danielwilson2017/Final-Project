@@ -156,13 +156,12 @@ class SpaceGame(App):
         bg4 = Sprite(bg_asset, (512, 512)) 
         bg5 = Sprite(bg_asset, (1024, 512))
         bg6 = Sprite(bg_asset, (1024, 0))
-        Asteroid((saved[0:1]))
+        Asteroid(((50),(50)))
         '''
         numas=lvl
-        if numas == 1 :
-            Asteroid((b,c))
-        elif numas == 2:
-            Asteroid(saved[0:1])
+        while numas != 1 :
+            
+            numas=numas-1
         '''
 
     def step(self):
