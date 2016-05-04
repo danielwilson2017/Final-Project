@@ -106,6 +106,8 @@ while numbes >=12:
 
 print(saved)
 
+
+
 class Asteroid(Sprite):
     
     asset5 = ImageAsset("images/Asteroid.png")
@@ -154,13 +156,14 @@ class SpaceGame(App):
         bg4 = Sprite(bg_asset, (512, 512)) 
         bg5 = Sprite(bg_asset, (1024, 512))
         bg6 = Sprite(bg_asset, (1024, 0))
-        
-        
+        Asteroid((saved[0:1]))
+        '''
         numas=lvl
         if numas == 1 :
             Asteroid((b,c))
         elif numas == 2:
             Asteroid(saved[0:1])
+        '''
 
     def step(self):
         for ship in self.getSpritesbyClass(Asteroid):
