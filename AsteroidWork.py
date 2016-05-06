@@ -178,8 +178,6 @@ class SpaceGame(App):
             m=m+2
             n=n+2
             numas=numas-1
-            print(l)
-            print(o)
 
 
     def step(self):
