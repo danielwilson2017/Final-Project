@@ -116,8 +116,8 @@ class Asteroid(Sprite):
         self.vx = .5
         self.vy = 0.5
         self.vr = 0.01
-        self.thrust = 1
-        self.thrustframe = 1
+        self.thrust = 10
+        self.thrustframe = 10
         #self.fxcenter = self.fycenter = 0.5
         
         
