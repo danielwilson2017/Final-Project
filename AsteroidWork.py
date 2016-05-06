@@ -105,8 +105,7 @@ while numbes >=12:
     numbes=numbes-1
 
 print(saved)
-m=0
-print(saved[m:m+1])
+
 
 
 class Asteroid(Sprite):
