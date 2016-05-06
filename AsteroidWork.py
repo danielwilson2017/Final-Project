@@ -105,7 +105,8 @@ while numbes >=12:
     numbes=numbes-1
 
 print(saved)
-
+m=0
+print(saved[m:m+1])
 
 
 class Asteroid(Sprite):
@@ -156,13 +157,19 @@ class SpaceGame(App):
         bg4 = Sprite(bg_asset, (512, 512)) 
         bg5 = Sprite(bg_asset, (1024, 512))
         bg6 = Sprite(bg_asset, (1024, 0))
-        Asteroid(((50),(50)))
-        '''
+
         numas=lvl
-        while numas != 1 :
-            
+        m=0
+        n=1
+        while numas != 0:
+            l=saved[m:m+1]
+            o=saved[n:n+1]
+            Asteroid((o))
+            Asteroid((l))
+            m=m+1
+            n=n+1
             numas=numas-1
-        '''
+
 
     def step(self):
         for ship in self.getSpritesbyClass(Asteroid):
