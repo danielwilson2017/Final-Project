@@ -157,7 +157,9 @@ class SpaceGame(App):
         bg4 = Sprite(bg_asset, (512, 512)) 
         bg5 = Sprite(bg_asset, (1024, 512))
         bg6 = Sprite(bg_asset, (1024, 0))
+        Asteroid(([(100, 100)]))
 
+    '''
         numas=lvl
         m=0
         n=1
@@ -169,7 +171,7 @@ class SpaceGame(App):
             m=m+1
             n=n+1
             numas=numas-1
-
+    '''
 
     def step(self):
         for ship in self.getSpritesbyClass(Asteroid):
