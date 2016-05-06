@@ -162,8 +162,8 @@ class SpaceGame(App):
         m=0
         n=1
         while numas != 0:
-            l=saved[m:m+1]
-            o=saved[n:n+1]
+            l=saved[m]
+            o=saved[n]
             print(o)
             Asteroid(o)
             Asteroid(l)
