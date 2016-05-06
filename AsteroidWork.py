@@ -106,7 +106,17 @@ while numbes >=12:
 
 print(saved)
 
-
+numas=lvl
+m=0
+n=1
+while numas != 0:
+    l=saved[m]
+    o=saved[n]
+    m=m+2
+    n=n+2
+    numas=numas-1
+    print(l)
+    print(o)
 
 class Asteroid(Sprite):
     
