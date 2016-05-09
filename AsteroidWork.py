@@ -148,7 +148,7 @@ class Asteroid(Sprite):
             self.thrust = 10
             self.thrustframe = 10
         
-        #self.fxcenter = self.fycenter = 0.5
+
         
         
         
