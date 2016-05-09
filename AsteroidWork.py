@@ -154,17 +154,12 @@ class Asteroid(Sprite):
             self.thrust = 10
             self.thrustframe = 10
         elif position >=(901,5):
-            self.vx = -.5
+            self.vx = -.25
             self.vy = 0.5
             self.vr = 0.01
             self.thrust = 10
             self.thrustframe = 10
-        elif position >=(0,200) and position <=(5,1000):
-            self.vx = .7
-            self.vy = -0.5
-            self.vr = 0.01
-            self.thrust = 10
-            self.thrustframe = 10
+
         
 
         
