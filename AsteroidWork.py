@@ -141,6 +141,7 @@ class Asteroid(Sprite):
             
             self.vx = .5
             self.vy = (math.sin(math.radians(180)))
+            #make a randomizer for speed of slope => radians(random.int(90,180))
             self.vr = 0.01
             self.thrust = 10
             self.thrustframe = 10
