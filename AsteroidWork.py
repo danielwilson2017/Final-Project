@@ -5,6 +5,7 @@ by E. Dennison
 """
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
 import random
+import math
 
 SCREEN_WIDTH = 1250
 SCREEN_HEIGHT = 700
@@ -134,6 +135,13 @@ class Asteroid(Sprite):
     asset5 = ImageAsset("images/Asteroid.png")
     def __init__(self, position):
         super().__init__(Asteroid.asset5, position)
+        if position ==(250,5):
+            self.vx = 
+            self.vy = 0.5
+            self.vr = 0.01
+            self.thrust = 10
+            self.thrustframe = 10
+        '''
         if position <=(250,5):
             self.vx = .5
             self.vy = 0.5
@@ -170,7 +178,7 @@ class Asteroid(Sprite):
             self.vr = 0.01
             self.thrust = 10
             self.thrustframe = 10
-
+        '''
         
 
         
