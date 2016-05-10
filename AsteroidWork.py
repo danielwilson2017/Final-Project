@@ -77,7 +77,12 @@ while numbs >=8:
             k=(d,e)
             saved.append((j))
             saved.append((k))
-            
+
+        elif b>=1221 and d>=1221 and e<=350 and c<=700 and c>=350:
+            j=(b,c)
+            k=(d,e)
+            saved.append((j))
+            saved.append((k))
 
         else:
             h=1
