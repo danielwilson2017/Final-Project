@@ -45,7 +45,7 @@ while nums >=1:
             saved.append((j))
             saved.append((k))
         
-        elif b>=1221 and d>=1221 and e<=700 and c<=700:
+        elif b>=1221 and d>=1221 and e<=350 and c<=700:
             j=(b,c)
             k=(d,e)
             saved.append((j))
