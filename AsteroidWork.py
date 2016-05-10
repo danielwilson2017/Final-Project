@@ -10,7 +10,7 @@ import math
 SCREEN_WIDTH = 1250
 SCREEN_HEIGHT = 700
 
-sinslope=range(0, 360, 10)
+
 
 lvl = int(input("What is your level? "))
 #randomizing the spawn point of the asteroid 
@@ -139,8 +139,8 @@ class Asteroid(Sprite):
         super().__init__(Asteroid.asset5, position)
         if position ==(250,5):
             
-            self.vx = 
-            self.vy = 0.5
+            self.vx = .5
+            self.vy = (math.sin(math.radians(range(0, 360, 10))))
             self.vr = 0.01
             self.thrust = 10
             self.thrustframe = 10
