@@ -140,10 +140,11 @@ class Asteroid(Sprite):
         if position ==(250,5):
             
             self.vx = .5
-            self.vy = (math.sin(math.radians(range(0, 360, 1))))
+            self.vy = (math.sin(math.radians(180)))
             self.vr = 0.01
             self.thrust = 10
             self.thrustframe = 10
+            print(self.vy)
         '''
         if position <=(250,5):
             self.vx = .5
