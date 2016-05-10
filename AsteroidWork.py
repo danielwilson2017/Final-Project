@@ -27,11 +27,11 @@ saved=[]
 while nums >=1:
     h=1
     while h==1:
-        b=random.randint(1,1000)
+        b=random.randint(1,1230)
         c=random.randint(1,700)
-        d=random.randint(1,1000)
+        d=random.randint(1,1230)
         e=random.randint(1,700)
-        if b<=1250 and d<=1250 and e<=5 and c<=5:
+        if b<=1220 and d<=1220 and e<=5 and c<=5:
             h=0
             j=(b,c)
             k=(d,e)
@@ -40,6 +40,12 @@ while nums >=1:
             
 
         elif b<=5 and d<=5 and e<=700 and c<=700:
+            j=(b,c)
+            k=(d,e)
+            saved.append((j))
+            saved.append((k))
+        
+        elif b>=1221 and d>=1221 and e<=700 and c<=700:
             j=(b,c)
             k=(d,e)
             saved.append((j))
@@ -199,7 +205,7 @@ class SpaceGame(App):
         bg4 = Sprite(bg_asset, (512, 512)) 
         bg5 = Sprite(bg_asset, (1024, 512))
         bg6 = Sprite(bg_asset, (1024, 0))
-        
+
         numas=lvl
         m=0
         n=1
