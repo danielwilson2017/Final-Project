@@ -132,67 +132,40 @@ while numas != 0:
     print(l)
     print(o)
 
+p=random.randint(1,15)
 class Asteroid(Sprite):
     
     asset5 = ImageAsset("images/Asteroid.png")
     def __init__(self, position):
         super().__init__(Asteroid.asset5, position)
-        if position ==(250,5):
-            
-            self.vx = .5
-            self.vy = (math.sin(math.radians(180)))
+        if position == (250,5):
+            self.vx = 1
+            self.vy = 1
+            self.t=0
             #make a randomizer for speed of slope => radians(random.int(90,180))
             self.vr = 0.01
             self.thrust = 10
             self.thrustframe = 10
             print(self.vy)
-        '''
-        if position <=(250,5):
-            self.vx = .5
-            self.vy = 0.5
-            self.vr = 0.01
-            self.thrust = 10
-            self.thrustframe = 10
-        elif position >=(250,5) and position<=(500,5):
-            self.vx = .25
-            self.vy = 0.5
-            self.vr = 0.01
-            self.thrust = 10
-            self.thrustframe = 10
-        elif position >=(501,5) and position <=(700,5):
-            self.vx = 0
-            self.vy = 0.5
-            self.vr = 0.01
-            self.thrust = 10
-            self.thrustframe = 10
-        elif position >=(701,5) and position <=(800,5):
-            self.vx = -.25
-            self.vy = 0.5
-            self.vr = 0.01
-            self.thrust = 10
-            self.thrustframe = 10
-        elif position >=(801,5) and position <=(900,5):
-            self.vx = -.1
-            self.vy = 0.5
-            self.vr = 0.01
-            self.thrust = 10
-            self.thrustframe = 10
-        elif position >=(901,5):
-            self.vx = -.25
-            self.vy = 0.5
-            self.vr = 0.01
-            self.thrust = 10
-            self.thrustframe = 10
-        '''
-        
+            
+            
 
-        
-        
-        
     def step(self):
-        self.x += self.vx
-        self.y += self.vy
-        self.rotation += self.vr
+        if p=5:
+            self.t += .1
+            self.x += 2*math.cos(self.t) + self.vx
+            self.y += 2*math.sin(self.t) + self.vy
+            self.rotation += self.vr
+        if p=6:
+            self.t += .1
+            self.x += self.vx
+            self.y += 2*math.sin(self.t) + self.vy
+            self.rotation += self.vr
+        else:
+            self.x += self.vx
+            self.y += self.vy
+            self.rotation += self.vr
+        
         if self.thrust == 1:
             #self.setImage(self.thrustframe)
             self.thrustframe += 1
