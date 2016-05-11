@@ -132,8 +132,8 @@ while numas != 0:
     print(l)
     print(o)
 
-#p=random.randint(1,10)
-p=6
+p=random.randint(1,10)
+
 class Asteroid(Sprite):
     
     asset5 = ImageAsset("images/Asteroid.png")
@@ -154,8 +154,8 @@ class Asteroid(Sprite):
     def step(self):
         if p==5:
             self.t += .1
-            self.x += 1.5*math.cos(self.t) + self.vx
-            self.y += 1.5*math.sin(self.t) + self.vy
+            self.x += 1.5*math.cos(self.t) + 0.5*self.vx
+            self.y += 1.5*math.sin(self.t) + 0.5*self.vy
             self.rotation += self.vr
         if p==6:
             self.t += .1
@@ -198,6 +198,7 @@ class SpaceGame(App):
         bg5 = Sprite(bg_asset, (1024, 512))
         bg6 = Sprite(bg_asset, (1024, 0))
         Asteroid((250,5))
+        Asteroid((500,0))
         '''
         numas=lvl
         m=0
