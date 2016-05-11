@@ -132,8 +132,8 @@ while numas != 0:
     print(l)
     print(o)
 
-p=random.randint(1,10)
-
+#p=random.randint(1,10)
+p=5
 class Asteroid(Sprite):
     
     asset5 = ImageAsset("images/Asteroid.png")
@@ -147,8 +147,15 @@ class Asteroid(Sprite):
             self.vr = 0.01
             self.thrust = 10
             self.thrustframe = 10
-            print(self.vy)
-            
+
+        if position == (500,0):
+            self.vx = .5
+            self.vy = .5
+            self.t=0
+            #make a randomizer for speed of slope => radians(random.int(90,180))
+            self.vr = 0.01
+            self.thrust = 10
+            self.thrustframe = 10
             
 
     def step(self):
