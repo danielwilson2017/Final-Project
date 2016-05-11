@@ -133,7 +133,7 @@ while numas != 0:
     print(o)
 
 #p=random.randint(1,10)
-p=5
+p=6
 class Asteroid(Sprite):
     
     asset5 = ImageAsset("images/Asteroid.png")
@@ -159,7 +159,7 @@ class Asteroid(Sprite):
             self.rotation += self.vr
         if p==6:
             self.t += .1
-            self.x += self.vx
+            self.x += 2*self.vx
             self.y += 2*math.sin(self.t) + self.vy
             self.rotation += self.vr
         else:
