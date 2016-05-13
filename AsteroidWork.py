@@ -132,8 +132,8 @@ while numas != 0:
     print(l)
     print(o)
 
-#p=random.randint(1,10)
-p=5
+p=random.randint(1,10)
+
 class Asteroid(Sprite):
     
     asset5 = ImageAsset("images/Asteroid.png")
