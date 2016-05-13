@@ -139,8 +139,8 @@ class Asteroid(Sprite):
     asset5 = ImageAsset("images/Asteroid.png")
     def __init__(self, position):
         super().__init__(Asteroid.asset5, position)
-        if position == (250,5):
-            self.vx = .5
+        if position <= (250,5):
+            self.vx = .25
             self.vy = .5
             self.t=0
             #make a randomizer for speed of slope => radians(random.int(90,180))
@@ -148,15 +148,23 @@ class Asteroid(Sprite):
             self.thrust = 10
             self.thrustframe = 10
 
-        if position == (500,0):
-            self.vx = .5
+        if position >= (250,0) and position <=(500,5):
+            self.vx = 0
             self.vy = .5
             self.t=0
             #make a randomizer for speed of slope => radians(random.int(90,180))
             self.vr = 0.01
             self.thrust = 10
             self.thrustframe = 10
-            
+
+        if position >= (501,0):
+            self.vx = -.25
+            self.vy = .5
+            self.t=0
+            #make a randomizer for speed of slope => radians(random.int(90,180))
+            self.vr = 0.01
+            self.thrust = 10
+            self.thrustframe = 10
 
     def step(self):
         if p==5:
@@ -204,9 +212,7 @@ class SpaceGame(App):
         bg4 = Sprite(bg_asset, (512, 512)) 
         bg5 = Sprite(bg_asset, (1024, 512))
         bg6 = Sprite(bg_asset, (1024, 0))
-        Asteroid((250,5))
-        Asteroid((500,0))
-        '''
+
         numas=lvl
         m=0
         n=1
@@ -218,7 +224,7 @@ class SpaceGame(App):
             m=m+2
             n=n+2
             numas=numas-1
-        '''
+
 
     def step(self):
         for ship in self.getSpritesbyClass(Asteroid):
