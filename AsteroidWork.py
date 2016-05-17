@@ -150,7 +150,7 @@ class Asteroid(Sprite):
                 self.thrustframe = 10
                 print([])
                 print(self.vy)
-            if position >= (0,101) and position <= (5,201):
+            if position >= (0,101) and position <= (5,200):
                 self.vx = .5
                 self.vy = random.randint(40,80)/100
                 self.t=0
@@ -160,7 +160,7 @@ class Asteroid(Sprite):
                 self.thrustframe = 10
                 print([])
                 print(self.vy)
-            if position <= (5,201):
+            if position >= (0,201) and position <= (5,700):
                 self.vx = .5
                 self.vy = 0
                 self.t=0
