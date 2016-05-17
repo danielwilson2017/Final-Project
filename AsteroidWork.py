@@ -147,9 +147,9 @@ class Asteroid(Sprite):
             self.vr = 0.01
             self.thrust = 10
             self.thrustframe = 10
-        
+            
         if position >= (0,0) and position <= (100,5):
-            self.vx = random.randint(60,80)/100
+            self.vx = random.randint(30,70)/100
             self.vy = .5
             self.t=0
             #make a randomizer for speed of slope => radians(random.int(90,180))
@@ -159,7 +159,7 @@ class Asteroid(Sprite):
             print(self.vx)
             
         if position >= (101,0) and position <= (200,5):
-            self.vx = random.randint(40,60)/100
+            self.vx = random.randint(30,55)/100
             self.vy = .5
             self.t=0
             #make a randomizer for speed of slope => radians(random.int(90,180))
@@ -169,7 +169,7 @@ class Asteroid(Sprite):
             print(self.vx)
 
         if position >= (201,0) and position <=(300,5):
-            self.vx = random.randint(30,50)/100
+            self.vx = random.randint(10,40)/100
             self.vy = .5
             self.t=0
             #make a randomizer for speed of slope => radians(random.int(90,180))
@@ -179,7 +179,7 @@ class Asteroid(Sprite):
             print(self.vx)
             
         if position >= (301,0) and position <=(400,5):
-            self.vx = random.randint(20,40)/100
+            self.vx = random.randint(10,30)/100
             self.vy = .5
             self.t=0
             #make a randomizer for speed of slope => radians(random.int(90,180))
@@ -189,7 +189,11 @@ class Asteroid(Sprite):
             print(self.vx)
         
         if position >= (401,0) and position <=(500,5):
-            self.vx = random.randint(10,30)/100
+            q=random.randint(0,10)
+            if q == 5:
+                self.vx = -random.randint(0,5)/100
+            else:
+                self.vx = random.randint(0,20)/100
             self.vy = .5
             self.t=0
             #make a randomizer for speed of slope => radians(random.int(90,180))
@@ -197,7 +201,7 @@ class Asteroid(Sprite):
             self.thrust = 10
             self.thrustframe = 10
             print(self.vx)
-            
+
         if position >= (501,0) and position <=(600,5):
             self.vx = 0
             self.vy = .5
@@ -209,7 +213,11 @@ class Asteroid(Sprite):
             print(self.vx)
 
         if position >= (601,0) and position <=(700,5):
-            self.vx = -random.randint(10,30)/100
+            q=random.randint(0,10)
+            if q == 5:
+                self.vx = random.randint(0,5)/100
+            else:
+                self.vx = -random.randint(0,20)/100
             self.vy = .5
             self.t=0
             #make a randomizer for speed of slope => radians(random.int(90,180))
@@ -219,7 +227,7 @@ class Asteroid(Sprite):
             print(self.vx)
 
         if position >= (701,0) and position <=(800,5):
-            self.vx = -random.randint(20,40)/100
+            self.vx = -random.randint(10,30)/100
             self.vy = .5
             self.t=0
             #make a randomizer for speed of slope => radians(random.int(90,180))
@@ -229,7 +237,7 @@ class Asteroid(Sprite):
             print(self.vx)
 
         if position >= (801,0) and position <=(900,5):
-            self.vx = -random.randint(30,50)/100
+            self.vx = -random.randint(15,30)/100
             self.vy = .5
             self.t=0
             #make a randomizer for speed of slope => radians(random.int(90,180))
@@ -239,7 +247,7 @@ class Asteroid(Sprite):
             print(self.vx)
             
         if position >= (901,0) and position <= (1000,5):
-            self.vx = -random.randint(40,60)/100
+            self.vx = -random.randint(30,60)/100
             self.vy = .5
             self.t=0
             #make a randomizer for speed of slope => radians(random.int(90,180))
@@ -249,7 +257,7 @@ class Asteroid(Sprite):
             print(self.vx)
         
         if position >= (1001,0) and position <= (1100,5):
-            self.vx = -random.randint(60,70)/100
+            self.vx = -random.randint(40,60)/100
             self.vy = .5
             self.t=0
             #make a randomizer for speed of slope => radians(random.int(90,180))
@@ -259,7 +267,7 @@ class Asteroid(Sprite):
             print(self.vx)
 
         if position >= (1101,0):
-            self.vx = -random.randint(60,80)/100
+            self.vx = -random.randint(40,60)/100
             self.vy = .5
             self.t=0
             #make a randomizer for speed of slope => radians(random.int(90,180))
