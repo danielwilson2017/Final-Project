@@ -353,6 +353,12 @@ class SpaceGame(App):
         Asteroid((1200,0))
         '''
         Asteroid((0,50))
+        Asteroid((0,100))
+        Asteroid((0,200))
+        Asteroid((0,300))
+        Asteroid((0,400))
+        Asteroid((0,500))
+        Asteroid((0,600))
         
         
         numas=lvl
