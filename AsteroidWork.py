@@ -337,6 +337,7 @@ class SpaceGame(App):
         bg4 = Sprite(bg_asset, (512, 512)) 
         bg5 = Sprite(bg_asset, (1024, 512))
         bg6 = Sprite(bg_asset, (1024, 0))
+        '''
         Asteroid((0,0))
         Asteroid((100,0))
         Asteroid((200,0))
@@ -350,7 +351,9 @@ class SpaceGame(App):
         Asteroid((1000,0))
         Asteroid((1100,0))
         Asteroid((1200,0))
+        '''
         Asteroid((0,50))
+        
         
         numas=lvl
         m=0
