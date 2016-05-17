@@ -139,14 +139,15 @@ class Asteroid(Sprite):
     asset5 = ImageAsset("images/Asteroid.png")
     def __init__(self, position):
         super().__init__(Asteroid.asset5, position)
-        if position <= (250,5):
-            self.vx = .25
-            self.vy = .5
-            self.t=0
-            #make a randomizer for speed of slope => radians(random.int(90,180))
-            self.vr = 0.01
-            self.thrust = 10
-            self.thrustframe = 10
+        if position >= (0,6) and position <=(5,700):
+            if position <= (250,5):
+                self.vx = .25
+                self.vy = .5
+                self.t=0
+                #make a randomizer for speed of slope => radians(random.int(90,180))
+                self.vr = 0.01
+                self.thrust = 10
+                self.thrustframe = 10
         
         if position >= (0,0) and position <= (1250,5):
             if position >= (0,0) and position <= (100,5):
