@@ -139,6 +139,58 @@ class Asteroid(Sprite):
     asset5 = ImageAsset("images/Asteroid.png")
     def __init__(self, position):
         super().__init__(Asteroid.asset5, position)
+        if position >= (1245,6) and position <= (1250,700):
+             if position >= (1245,6) and position <= (1250,100):
+                self.vx = -.5
+                self.vy = random.randint(40,80)/100
+                self.t=0
+                #make a randomizer for speed of slope => radians(random.int(90,180))
+                self.vr = 0.01
+                self.thrust = 10
+                self.thrustframe = 10
+
+            if position >= (1245,101) and position <= (1250,200):
+                self.vx = -.5
+                self.vy = random.randint(40,80)/100
+                self.t=0
+                #make a randomizer for speed of slope => radians(random.int(90,180))
+                self.vr = 0.01
+                self.thrust = 10
+                self.thrustframe = 10
+                
+            if position >= (1245,201) and position <= (1250,400):
+                self.vx = -.5
+                s=random.randint(1,10)
+                if s == 5:
+                    self.vx = -random.randint(0,5)/100
+                else:
+                    self.vy = random.randint(20,40)/100
+                self.t=0
+                #make a randomizer for speed of slope => radians(random.int(90,180))
+                self.vr = 0.01
+                self.thrust = 10
+                self.thrustframe = 10
+                
+            if position >= (1245,401) and position <= (1250,500):
+                self.vx = -.5
+                self.vy = -random.randint(20,40)/100
+                self.t=0
+                #make a randomizer for speed of slope => radians(random.int(90,180))
+                self.vr = 0.01
+                self.thrust = 10
+                self.thrustframe = 10
+                print(self.vy)
+                
+            if position >= (1245,501) and position <= (1250,700):
+                self.vx = -.5
+                self.vy = -random.randint(0,10)/100
+                self.t=0
+                #make a randomizer for speed of slope => radians(random.int(90,180))
+                self.vr = 0.01
+                self.thrust = 10
+                self.thrustframe = 10
+                print(self.vy)
+        
         if position >= (0,6) and position <=(5,700):
             if position >= (0,6) and position <= (5,100):
                 self.vx = .5
@@ -367,7 +419,7 @@ class SpaceGame(App):
         bg4 = Sprite(bg_asset, (512, 512)) 
         bg5 = Sprite(bg_asset, (1024, 512))
         bg6 = Sprite(bg_asset, (1024, 0))
-        '''
+        
         Asteroid((0,0))
         Asteroid((100,0))
         Asteroid((200,0))
@@ -381,7 +433,7 @@ class SpaceGame(App):
         Asteroid((1000,0))
         Asteroid((1100,0))
         Asteroid((1200,0))
-        '''
+        
         Asteroid((0,50))
         Asteroid((0,100))
         Asteroid((0,200))
@@ -389,6 +441,8 @@ class SpaceGame(App):
         Asteroid((0,400))
         Asteroid((0,500))
         Asteroid((0,600))
+        
+        Asteroid((1245,50))
         
         
         numas=lvl
