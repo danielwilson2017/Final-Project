@@ -142,7 +142,7 @@ class Asteroid(Sprite):
         if position >= (0,6) and position <=(5,700):
             if position >= (0,6) and position <= (5,100):
                 self.vx = .5
-                self.vy = 1#random.randint(40,80)/100
+                self.vy = random.randint(40,80)/100
                 self.t=0
                 #make a randomizer for speed of slope => radians(random.int(90,180))
                 self.vr = 0.01
@@ -151,33 +151,42 @@ class Asteroid(Sprite):
 
             if position >= (0,101) and position <= (5,200):
                 self.vx = .5
-                self.vy = 1#random.randint(40,80)/100
+                self.vy = random.randint(40,80)/100
                 self.t=0
                 #make a randomizer for speed of slope => radians(random.int(90,180))
                 self.vr = 0.01
                 self.thrust = 10
                 self.thrustframe = 10
-            if position >= (0,201) and position <= (5,300):
+            if position >= (0,201) and position <= (5,400):
                 self.vx = .5
-                self.vy = random.randint(20,40)/100
+                s=random.randint(1,10)
+                if s == 5:
+                    self.vx = -random.randint(0,5)/100
+                else:
+                    self.vy = random.randint(20,40)/100
                 self.t=0
                 #make a randomizer for speed of slope => radians(random.int(90,180))
                 self.vr = 0.01
                 self.thrust = 10
                 self.thrustframe = 10
-                print([])
                 print(self.vy)
-                print([])
-            if position >= (0,301) and position <= (5,700):
+            if position >= (0,401) and position <= (5,500):
                 self.vx = .5
-                self.vy = 1
+                self.vy = -random.randint(20,40)/100
                 self.t=0
                 #make a randomizer for speed of slope => radians(random.int(90,180))
                 self.vr = 0.01
                 self.thrust = 10
                 self.thrustframe = 10
-                print()
-                print(self.vy)
+            if position >= (0,501) and position <= (5,700):
+                self.vx = .5
+                self.vy = -random.randint(40,80)/100
+                self.t=0
+                #make a randomizer for speed of slope => radians(random.int(90,180))
+                self.vr = 0.01
+                self.thrust = 10
+                self.thrustframe = 10
+                
         
         elif position >= (0,0) and position <= (1250,5):
             if position >= (0,0) and position <= (100,5):
