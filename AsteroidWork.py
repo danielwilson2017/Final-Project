@@ -140,7 +140,7 @@ class Asteroid(Sprite):
     def __init__(self, position):
         super().__init__(Asteroid.asset5, position)
         if position >= (1245,6) and position <= (1250,700):
-             if position >= (1245,6) and position <= (1250,100):
+            if position >= (1245,6) and position <= (1250,100):
                 self.vx = -.5
                 self.vy = random.randint(40,80)/100
                 self.t=0
@@ -419,31 +419,6 @@ class SpaceGame(App):
         bg4 = Sprite(bg_asset, (512, 512)) 
         bg5 = Sprite(bg_asset, (1024, 512))
         bg6 = Sprite(bg_asset, (1024, 0))
-        
-        Asteroid((0,0))
-        Asteroid((100,0))
-        Asteroid((200,0))
-        Asteroid((300,0))
-        Asteroid((400,0))
-        Asteroid((500,0))
-        Asteroid((600,0))
-        Asteroid((700,0))
-        Asteroid((800,0))
-        Asteroid((900,0))
-        Asteroid((1000,0))
-        Asteroid((1100,0))
-        Asteroid((1200,0))
-        
-        Asteroid((0,50))
-        Asteroid((0,100))
-        Asteroid((0,200))
-        Asteroid((0,300))
-        Asteroid((0,400))
-        Asteroid((0,500))
-        Asteroid((0,600))
-        
-        Asteroid((1245,50))
-        
         
         numas=lvl
         m=0
