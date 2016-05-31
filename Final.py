@@ -372,7 +372,6 @@ class Asteroid(Sprite):
                 self.vx = random.randint(10,30)/100
                 self.vy = .5
                 self.t=0
-                #make a randomizer for speed of slope => radians(random.int(90,180))
                 self.vr = 0.01
                 self.thrust = 10
                 self.thrustframe = 10
@@ -386,7 +385,6 @@ class Asteroid(Sprite):
                     self.vx = random.randint(0,20)/100
                 self.vy = .5
                 self.t=0
-                #make a randomizer for speed of slope => radians(random.int(90,180))
                 self.vr = 0.01
                 self.thrust = 10
                 self.thrustframe = 10
@@ -396,7 +394,6 @@ class Asteroid(Sprite):
                 self.vx = 0
                 self.vy = .5
                 self.t=0
-                #make a randomizer for speed of slope => radians(random.int(90,180))
                 self.vr = 0.01
                 self.thrust = 10
                 self.thrustframe = 10
@@ -513,7 +510,7 @@ class SpaceGame(App):
         bg5 = Sprite(bg_asset, (1024, 512))
         bg6 = Sprite(bg_asset, (1024, 0))
         SpaceShip((600,400))
-        Asteroid((500,0))
+        Asteroid((450,0))
         
         numas=lvl
         m=0
