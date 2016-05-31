@@ -14,9 +14,6 @@ SCREEN_WIDTH = 1250
 SCREEN_HEIGHT = 700
 
 
-lvl = int(input("What is your level? "))
-
-
 class SpaceShip(Sprite):
     """
     Animated space ship
@@ -516,7 +513,7 @@ class SpaceGame(App):
         bg5 = Sprite(bg_asset, (1024, 512))
         bg6 = Sprite(bg_asset, (1024, 0))
         SpaceShip((600,400))
-        
+        Asteroid((500,0))
         
         numas=lvl
         m=0
