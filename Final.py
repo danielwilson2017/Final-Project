@@ -510,7 +510,7 @@ class SpaceGame(App):
         bg5 = Sprite(bg_asset, (1024, 512))
         bg6 = Sprite(bg_asset, (1024, 0))
         SpaceShip((600,400))
-        Asteroid((450,0))
+        Asteroid((550,0))
         
         numas=lvl
         m=0
