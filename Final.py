@@ -395,7 +395,7 @@ class Asteroid(Sprite):
                 u = random.randint(1,10)
                 q=random.randint(0,10)
                 if q == 5:
-                    (self.vx = -random.randint(0,5)/100)*u
+                    ((self.vx = -random.randint(0,5)/100)*u
                 else:
                     (self.vx = random.randint(0,20)/100)*u
                 self.vy = (.5)*u
