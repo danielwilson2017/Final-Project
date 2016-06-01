@@ -107,6 +107,8 @@ class ExplosionSmall(Sprite):
             self.destroy()
 
 lvl = int(input("What is your level? "))
+o=(lvl)*2
+print(o)
 #randomizing the spawn point of the asteroid 
 nums=lvl
 if nums>=6 and nums<=10:
@@ -484,7 +486,10 @@ class Asteroid(Sprite):
                 self.thrust = 10
                 self.thrustframe = 10
                 
-        #if position <= (0,0) and position <= (1255,0) and position >=(1255, 
+        if position >= (0,0) and position <= (1255, 705):
+            o=o-1
+            print(o)
+            
             
     def step(self):
         if p==5:
