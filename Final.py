@@ -484,6 +484,7 @@ class Asteroid(Sprite):
                 self.thrust = 10
                 self.thrustframe = 10
                 
+        #if position <= (0,0) and position <= (1255,0) and position >=(1255, 
             
     def step(self):
         if p==5:
