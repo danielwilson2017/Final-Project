@@ -491,7 +491,7 @@ class Asteroid(Sprite):
                 
         
         ov=lvl*2
-        if position >= (0,0) and position <= (1255, 705):
+        while position >= (0,0) and position <= (1255, 705):
             ov=ov
         else:
             ov=ov-1
