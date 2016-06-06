@@ -107,7 +107,9 @@ class ExplosionSmall(Sprite):
             self.destroy()
 
 lvl = int(input("What is your level? "))
-
+if lvl >= 25:
+    lvl=25
+print(lvl)
 #randomizing the spawn point of the asteroid 
 nums=lvl
 ov=lvl*2
